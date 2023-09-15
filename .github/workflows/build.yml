@@ -42,5 +42,6 @@ jobs:
           source poky/oe-init-build-env
           bitbake-layers add-layer ../meta-raspberrypi
           bitbake-layers add-layer ../meta-lumenvault
+          echo 'MACHINE = "raspberrypi4-64"' >> conf/local.conf 
           bitbake lumenvault
           
