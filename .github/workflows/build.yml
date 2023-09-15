@@ -24,9 +24,7 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
-
-      - name: Debug Step
-        run: echo $SHELL
+      
       # Runs a set of commands using the runners shell
       - name: Set up environment for building
         run: |
@@ -36,8 +34,6 @@ jobs:
             python3-dev python3-pip gawk wget git-core diffstat unzip texinfo \
             gcc-multilib chrpath socat libsdl1.2-dev xterm cpio file locales
           sudo locale-gen en_US.UTF-8 && sudo update-locale LC_ALL=en_US.UTF-8 LANG=en_US.UTF-8
-          sudo export LANG=en_US.UTF-8
-          sudo export LC_ALL en_US.UTF-8
       
       - name: Build the project
         run: |
