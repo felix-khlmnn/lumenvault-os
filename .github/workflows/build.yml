@@ -40,7 +40,7 @@ jobs:
       - name: Build the project
         run: |
           source poky/oe-init-build-env
-          bitbake-layer add-layer ../meta-raspberrypi
-          bitbake-layer add-layer ../meta-lumenvault
+          bitbake-layers add-layer ../meta-raspberrypi
+          bitbake-layers add-layer ../meta-lumenvault
           bitbake lumenvault
           
