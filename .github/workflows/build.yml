@@ -33,6 +33,8 @@ jobs:
           bitbake-layers add-layer ../meta-raspberrypi
           bitbake-layers add-layer ../meta-lumenvault
           echo 'INHERIT:append = " rm_work"' >> conf/local.conf
-          echo 'MACHINE = "raspberrypi4-64"' >> conf/local.conf 
+          echo 'MACHINE = "raspberrypi4-64"' >> conf/local.conf
+          echo 'DL_DIR = "/srv/Backups/actions/persistant/downloads"' >> conf/local.conf
+          echo 'SSTATE_DIR = "/srv/Backups/actions/persistant/sstate-cache"' >> conf/local.conf
           bitbake lumenvault
           
